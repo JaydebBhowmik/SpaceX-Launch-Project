@@ -1,0 +1,42 @@
+const LAUNCH_DATA = `
+{
+    launchesPast(limit: 10) {
+        mission_name
+        launch_date_local
+        launch_site {
+        site_name_long
+        }
+        launch_success
+        links {
+        wikipedia
+        }
+        rocket {
+        rocket_name
+        first_stage {
+            cores {
+            flight
+            core {
+                reuse_count
+                status
+            }
+            }
+        }
+        second_stage {
+            payloads {
+            payload_type
+            payload_mass_kg
+            }
+        }
+        rocket_type
+        }
+        ships {
+        name
+        home_port
+        image
+        }
+    }
+}
+
+`
+
+export default LAUNCH_DATA
